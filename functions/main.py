@@ -41,6 +41,7 @@ def parse_telex():
 
 @scheduler_fn.on_schedule(schedule="0 * * * *", region="europe-west1")
 def hourly_telex_parsing(event: scheduler_fn.ScheduledEvent) -> None:
+    logger.warning("Running hourly Telex parsing")
     db = firestore.client()
     telex_articles: list[TelexRssEntry] = parse_telex()
     db_ref = db.collection("telex_articles")

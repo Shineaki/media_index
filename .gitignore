@@ -8,6 +8,7 @@ firebase-debug.log*
 firebase-debug.*.log*
 mediaparser-2fc06-firebase-adminsdk-7jj0a-8ca91f0f24.json
 venv
+.venv
 __pycache__
 
 # Firebase cache
