@@ -1,0 +1,11 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+      // Allow service accounts to read and write
+      allow read, write: if request.auth.token.service_account;
+
+      // Deny access to all other users
+      allow read, write: if false;
+  }
+}

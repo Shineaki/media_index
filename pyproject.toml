@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "media-parser"
+version = "0.1.0"
+description = ""
+authors = ["Shineaki <halmosadam92@gmail.com>"]
+readme = "README.md"
+packages = [{include = "media_parser"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+rss-parser = "^2.0.0"
+requests = "^2.32.3"
+beautifulsoup4 = "^4.11.0"
+firebase-admin = "^6.5.0"
+firebase-functions = "^0.4.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
